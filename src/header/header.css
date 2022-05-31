@@ -48,7 +48,7 @@ nav .right {
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     padding: 5px;
 }
@@ -56,7 +56,7 @@ nav .right {
 nav .right ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 
 }

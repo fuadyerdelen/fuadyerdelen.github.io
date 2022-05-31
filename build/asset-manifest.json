@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.526cea72.css",
+    "main.js": "/static/js/main.83a49396.js",
+    "static/media/profil.jpg": "/static/media/profil.d7a017506433fd8bc67d.jpg",
+    "static/media/reddit.png": "/static/media/reddit.9b8ed63a18fdd5c0235f.png",
+    "static/media/twitter.png": "/static/media/twitter.1a45189480d54ea0f898.png",
+    "index.html": "/index.html",
+    "main.526cea72.css.map": "/static/css/main.526cea72.css.map",
+    "main.83a49396.js.map": "/static/js/main.83a49396.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.526cea72.css",
+    "static/js/main.83a49396.js"
+  ]
+}
