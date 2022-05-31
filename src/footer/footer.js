@@ -5,13 +5,13 @@ export default class Footer extends Component {
     render() {
         return (
             <footer>
-                <div class="footer-left">
+                <div className="footer-left">
                     <p>2022 &copy; m.fuad yerdelen</p>
                 </div>
                 <div>
-                    <div class="call"></div>
-                    <div class="write"></div>
-                    <div class="follow"></div>
+                    <div className="call"></div>
+                    <div className="write"></div>
+                    <div className="follow"></div>
                 </div>
             </footer>
 
