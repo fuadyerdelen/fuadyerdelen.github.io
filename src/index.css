@@ -25,7 +25,7 @@ body {
     font-size: 14px;
     color: rgb(255, 255, 255);
 
-    background-color: #212221;
+    background: linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
 
 }
 @media (min-width: 768px) {

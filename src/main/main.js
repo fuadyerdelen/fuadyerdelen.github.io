@@ -5,6 +5,8 @@ import linkedin from "./images/linkedin.png"
 import twitter from "./images/twitter.png"
 import reddit from "./images/reddit.png"
 
+
+
 export default class Main extends Component {
     render() {
         return (
@@ -39,20 +41,7 @@ export default class Main extends Component {
                     </div>
 
                 </div>
-
-
-                <div id="works">
-                    <h2>My Works</h2>
-                    <div>
-                        <div class="work"></div>
-                        <div class="work"></div>
-                        <div class="work"></div>
-                        <div class="work"></div>
-                    </div>
-
-                </div>
-
-
+                
 
             </main>
 
@@ -61,6 +50,8 @@ export default class Main extends Component {
     }
 
 }
+
+
 
 
 

@@ -2,10 +2,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     padding: 40px 180px 80px 180px;
-    background-color: #212221;
     justify-content: center;
     color: #DDEDF4;
-
+    height: 100vh;
 }
 
 .card {
@@ -166,7 +165,7 @@ main {
         display: flex;
         padding: 10px;
         justify-content: center;
-
+        height: 100vh;
 
     }
 
