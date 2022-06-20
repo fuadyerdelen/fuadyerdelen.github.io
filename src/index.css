@@ -26,8 +26,11 @@ body {
     color: rgb(255, 255, 255);
 
     background: linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
+    background-size: cover;
+  
 
 }
+
 @media (min-width: 768px) {
     .card {
         display: flex;
@@ -90,6 +93,7 @@ body {
         line-height: 26px;
         padding: 10px 10px 10px 10px;
     }
+
 
     #works {
         padding: 2px;

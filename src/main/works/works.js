@@ -7,10 +7,10 @@ export default class Works extends Component {
         <div id="works">
             <h2>My Works</h2>
             <div>
-                <div class="work"></div>
-                <div class="work"></div>
-                <div class="work"></div>
-                <div class="work"></div>
+                <div className='work'></div>
+                <div className='work'></div>
+                <div className='work'></div>
+                <div className='work'></div>
             </div>
 
         </div>
