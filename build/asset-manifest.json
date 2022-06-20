@@ -1,16 +1,16 @@
 {
-  "files": {
-    "main.css": "/static/css/main.a5b55d25.css",
-    "main.js": "/static/js/main.8df09874.js",
-    "static/media/profil.jpg": "/static/media/profil.d7a017506433fd8bc67d.jpg",
-    "static/media/reddit.png": "/static/media/reddit.9b8ed63a18fdd5c0235f.png",
-    "static/media/twitter.png": "/static/media/twitter.1a45189480d54ea0f898.png",
-    "index.html": "/index.html",
-    "main.a5b55d25.css.map": "/static/css/main.a5b55d25.css.map",
-    "main.8df09874.js.map": "/static/js/main.8df09874.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.a5b55d25.css",
-    "static/js/main.8df09874.js"
-  ]
+  "main.css": "/static/css/main.b5db93bb.chunk.css",
+  "main.js": "/static/js/main.422853cf.chunk.js",
+  "main.js.map": "/static/js/main.422853cf.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.a270c9da.chunk.js": "/static/js/2.a270c9da.chunk.js",
+  "static/js/2.a270c9da.chunk.js.map": "/static/js/2.a270c9da.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.a6fd7acaa1ec12501f491a00a3dfdf43.js": "/precache-manifest.a6fd7acaa1ec12501f491a00a3dfdf43.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.b5db93bb.chunk.css.map": "/static/css/main.b5db93bb.chunk.css.map",
+  "static/media/profil.jpg": "/static/media/profil.2d6070c3.jpg",
+  "static/media/reddit.png": "/static/media/reddit.21f9458b.png",
+  "static/media/twitter.png": "/static/media/twitter.905165b5.png"
 }
