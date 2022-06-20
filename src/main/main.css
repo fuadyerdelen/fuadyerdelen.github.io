@@ -99,12 +99,22 @@ main {
     transition-delay: 50ms;
 }
 
+#write_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 10px 10px 10px 10px;
+}
+
 #hello button {
     font-size: 13px;
     line-height: 18px;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 14px 30px;
+    margin-top: 12px;
     background: var(--belirgin);
     color: rgb(33, 34, 33);
     border-radius: 0;
@@ -196,6 +206,8 @@ main {
         line-height: 26px;
         padding: 10px 10px 10px 10px;
     }
+
+
 
     #works {
         padding: 2px;
