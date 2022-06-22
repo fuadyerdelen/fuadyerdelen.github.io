@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import "./main.css"
+import '../index.css'
 import profil from "./images/profil.jpg"
 import linkedin from "./images/linkedin.png"
 import twitter from "./images/twitter.png"
 import reddit from "./images/reddit.png"
-import write from './write me/write'
+//import write from './write me/write'
 
 
 
@@ -21,7 +22,8 @@ export default class Main extends Component {
                     <div id="me">
                         <img id="image" src={profil} alt="profil" />
                         <h1>M.Fuad Yerdelen</h1>
-                        <p id="job" class="job">Frontend Developer</p>
+                        < p id="job"
+                            className="job"> Frontend Developer </p>
                         <div className="social">
                             <ul>
                                 <li><a href="https://twitter.com/fuadyerdelen"><img src={twitter} alt="twitter" /></a></li>
