@@ -43,19 +43,3 @@ body {
     }
 
 }
-
-/* Media query for mobile phones: screen width less than 768px */
-
-@media (max-width: 768px) {
-
-    nav .left {
-        width: 100%;
-        font-size: 12px;
-
-    }
-
-    
-
-
-
-}
