@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import "./main.css"
 import '../index.css'
-import profil from "./images/profil.jpg"
+import profil from "./images/profil.webp"
 import linkedin from "./images/linkedin.png"
 import twitter from "./images/twitter.png"
 import reddit from "./images/reddit.png"
