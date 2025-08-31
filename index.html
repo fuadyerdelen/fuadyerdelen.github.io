@@ -4,237 +4,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-translate="page_title">m.fuad yerdelen</title>
+  <title data-translate="page_title">M.Fuad Yerdelen - Portfolyo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
-   body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F3F4F6; 
-    color: #374151; 
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #374151; 
+    }
 
-  h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
-    color: #1E3A8A; 
-  }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      color: #111827; 
+      font-weight: 600;
+    }
+    
+    .lang-btn {
+      transition: color 0.2s ease-in-out;
+    }
+    .lang-btn.active {
+      color: #111827;
+      font-weight: 600;
+    }
 
-  .accent-color {
-    color: #10B981; 
-  }
+    .nav-link {
+        transition: color 0.2s ease-in-out;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #1f2937;
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-weight: 500;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
 
-  .accent-bg {
-    background-color: #10B981;
-  }
+    .social-link svg {
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+    .social-link:hover svg {
+        transform: scale(1.1);
+        color: #111827;
+    }
+    
+    .project-card {
+        background: #ffffff;
+        border: 1px solid #e5e7eb; 
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+    }
+    
+    .project-placeholder {
+        background-color: #fafafa; 
+        border: 2px dashed #d1d5db; 
+        color: #6b7280; 
+        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+    .project-placeholder:hover {
+        background-color: #f3f4f6; 
+        border-color: #9ca3af; 
+    }
 
-  .accent-border {
-    border-color: #10B981;
-  }
-
-  .accent-bg-light {
-    background-color: #D1FAE5; 
-  }
-
-  .accent-text-dark {
-    color: #065F46; 
-  }
-
-  .section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #10B981; 
-    margin-top: 0.75rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .section-title.left-align::after {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .lang-btn.active {
-    color: #10B981;
-    font-weight: 600;
-  }
-
-  a {
-    transition: color 0.3s;
-  }
-  a:hover {
-    color: #1E3A8A; 
-  }
+    .tech-pill {
+        background-color: #f3f4f6; 
+        color: #4b5563; 
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+    }
   </style>
 </head>
 
 <body class="antialiased">
 
-  <div class="container mx-auto max-w-5xl px-6 py-12 md:py-20 relative">
-
-    <div id="lang-switcher"
-      class="absolute top-4 right-6 md:top-8 md:right-6 flex items-center space-x-2 sm:space-x-3 z-10">
-      <button data-lang="tr"
-        class="lang-btn font-medium text-sm text-stone-500 hover:accent-color transition-colors focus:outline-none">TR</button>
-      <span class="text-stone-300">|</span>
-      <button data-lang="en"
-        class="lang-btn font-medium text-sm text-stone-500 hover:accent-color transition-colors focus:outline-none">EN</button>
-      <span class="text-stone-300">|</span>
-      <button data-lang="de"
-        class="lang-btn font-medium text-sm text-stone-500 hover:accent-color transition-colors focus:outline-none">DE</button>
-    </div>
-
-    <header id="home" class="text-center mb-24 md:mb-32 pt-12 md:pt-8">
-      <nav class="mb-10">
-        <a href="#about" class="text-stone-600 hover:accent-color transition-colors mx-3 font-medium"
-          data-translate="nav_about">Hakkımda</a>
-        <a href="#projects" class="text-stone-600 hover:accent-color transition-colors mx-3 font-medium"
-          data-translate="nav_projects">Projeler</a>
-        <a href="#contact" class="text-stone-600 hover:accent-color transition-colors mx-3 font-medium"
-          data-translate="nav_contact">İletişim</a>
-      </nav>
-      <h1 class="text-4xl md:text-5xl font-bold mb-2" data-translate="hero_name">M.Fuad Yerdelen</h1>
-      <h2 class="text-xl md:text-2xl text-stone-500 mb-6" data-translate="hero_title">Finansal Muhasebe ve Yazılım
-        Geliştirme</h2>
-      <p class="max-w-2xl mx-auto mb-8 text-stone-600" data-translate="hero_description">
-        Finans ve yazılım alanlarını birleştirerek kullanışlı uygulamalar geliştiriyorum.
-      </p>
-      <div class="flex justify-center items-center space-x-6">
-        <a href="https://github.com/fuadyerdelen" target="_blank" rel="noopener noreferrer"
-          data-translate-aria="github_profile_aria" aria-label="GitHub profili"
-          class="text-stone-500 hover:accent-color transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-            <path
-              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
-            </path>
-            <path d="M9 18c-4.51 2-5-2-7-2"></path>
-          </svg>
-        </a>
-        <a href="https://linkedin.com/in/mfuadyerdelen" target="_blank" rel="noopener noreferrer"
-          data-translate-aria="linkedin_profile_aria" aria-label="LinkedIn profili"
-          class="text-stone-500 hover:accent-color transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect width="4" height="12" x="2" y="9"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-
-      </div>
+  <div class="container mx-auto max-w-4xl px-6 py-8 md:py-12">
+    <header class="flex justify-end items-center py-6 mb-20 md:mb-28 border-b border-gray-100">
+        <div class="flex items-center space-x-6">
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="nav-link text-gray-500 hover:text-gray-900 font-medium" data-translate="nav_about">Hakkımda</a>
+                <a href="#projects" class="nav-link text-gray-500 hover:text-gray-900 font-medium" data-translate="nav_projects">Projeler</a>
+                <a href="#contact" class="nav-link text-gray-500 hover:text-gray-900 font-medium" data-translate="nav_contact">İletişim</a>
+            </nav>
+            <div id="lang-switcher" class="flex items-center space-x-2 border-l border-gray-200 pl-4">
+                <button data-lang="tr" class="lang-btn font-medium text-sm text-gray-500 hover:text-gray-900 focus:outline-none">TR</button>
+                <button data-lang="en" class="lang-btn font-medium text-sm text-gray-500 hover:text-gray-900 focus:outline-none">EN</button>
+                <button data-lang="de" class="lang-btn font-medium text-sm text-gray-500 hover:text-gray-900 focus:outline-none">DE</button>
+            </div>
+        </div>
     </header>
 
     <main>
-      <section id="about" class="mb-24 md:mb-32">
-        <h3 class="text-2xl md:text-3xl font-bold mb-8 section-title left-align" data-translate="about_title">Hakkımda
-        </h3>
-        <div class="space-y-4 text-stone-600 max-w-3xl">
-          <p data-translate="about_p1">Finans ve muhasebe alanındaki tecrübemi yazılım geliştirme becerilerimle
-            birleştiriyorum. Amacım, finansal süreçleri basitleştiren ve kullanıcılar için pratik hale getiren dijital
-            çözümler oluşturmaktır.</p>
-          <p data-translate="about_p2">Muhasebenin getirdiği yapısal düşünme biçimi, kod yazarken daha düzenli ve
-            anlaşılır uygulamalar geliştirmeme yardımcı oluyor. Sürekli yeni teknolojiler öğrenerek kendimi geliştirmeye
-            odaklanıyorum.</p>
+      <section id="home" class="text-center mb-32 md:mb-40">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4" data-translate="hero_name">M.Fuad Yerdelen</h1>
+        <h2 class="text-xl md:text-2xl text-gray-600 mb-8" data-translate="hero_title">KOBİ'ler için Muhasebe ve Yazılım Çözümleri</h2>
+        <p class="max-w-2xl mx-auto mb-10 text-lg text-gray-700 leading-relaxed" data-translate="hero_description">
+          Bir muhasebeci olarak, KOBİ'lerin finansal süreçlerini anlıyor ve bu süreçleri yazılım becerilerimle birleştirerek dijitalleştirmek ve optimize etmek için modern çözümler geliştiriyorum.
+        </p>
+       
+        <div class="flex justify-center items-center space-x-6">
+          <a href="https://github.com/fuadyerdelen" target="_blank" rel="noopener noreferrer"
+            data-translate-aria="github_profile_aria" aria-label="GitHub profili"
+            class="social-link text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+              </path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/m-fuad-yerdelen/" target="_blank" rel="noopener noreferrer"
+            data-translate-aria="linkedin_profile_aria" aria-label="LinkedIn profili"
+            class="social-link text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
         </div>
-        <h4 class="font-semibold text-stone-700 mt-8 mb-4" data-translate="tech_stack_title">Sık kullandığım
-          teknolojiler:</h4>
+      </section>
+
+      <section id="about" class="mb-32 md:mb-40">
+        <h3 class="text-3xl md:text-4xl font-bold mb-8" data-translate="about_title">Hakkımda</h3>
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl">
+          <p data-translate="about_p1">Muhasebe geçmişim, KOBİ'lerin karşılaştığı finansal zorlukları derinlemesine anlamamı sağlıyor. Bu anlayışı yazılım geliştirme yeteneğimle birleştirerek, verimliliği artıran ve iş akışlarını basitleştiren pratik dijital araçlar oluşturuyorum.</p>
+          <p data-translate="about_p2">Amacım, finansal uzmanlık ve teknolojiyi bir araya getirerek, işletmelerin büyümesine destek olan kullanıcı dostu ve etkili uygulamalar sunmaktır.</p>
+        </div>
+        <h4 class="font-medium text-gray-800 mt-12 mb-5" data-translate="tech_stack_title">Sık kullandığım teknolojiler:</h4>
         <div class="flex flex-wrap gap-3">
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">TypeScript</span>
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">Angular</span>
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">Spring Boot</span>
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">Node.js</span>
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">Tailwind CSS</span>
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">DATEV</span>
-          <span class="accent-bg-light accent-text-dark text-sm font-medium px-4 py-1 rounded-full">SAP FI/CO</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Angular</span>
+          <span class="tech-pill">Spring Boot</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Tailwind CSS</span>
+          <span class="tech-pill">DATEV</span>
+          <span class="tech-pill">SAP FI/CO</span>
         </div>
       </section>
 
-      <section id="projects" class="mb-24 md:mb-32">
-        <h3 class="text-2xl md:text-3xl font-bold mb-12 section-title left-align" data-translate="projects_title">
-          Projeler</h3>
+      <section id="projects" class="mb-32 md:mb-40">
+        <h3 class="text-3xl md:text-4xl font-bold mb-12" data-translate="projects_title">Projeler</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div class="project-placeholder flex flex-col items-center justify-center p-6 h-56 rounded-xl">
+            <h4 class="font-bold text-xl mb-2" data-translate="project_placeholder_title">Proje Başlığı</h4>
+            <p class="text-center" data-translate="project_placeholder_desc">Proje açıklaması yakında eklenecektir.</p>
+          </div>
+          <div class="project-placeholder flex flex-col items-center justify-center p-6 h-56 rounded-xl">
+            <h4 class="font-bold text-xl mb-2" data-translate="project_placeholder_title">Proje Başlığı</h4>
+            <p class="text-center" data-translate="project_placeholder_desc">Proje açıklaması yakında eklenecektir.</p>
+          </div>
+          <div class="project-placeholder flex flex-col items-center justify-center p-6 h-56 rounded-xl">
+            <h4 class="font-bold text-xl mb-2" data-translate="project_placeholder_title">Proje Başlığı</h4>
+            <p class="text-center" data-translate="project_placeholder_desc">Proje açıklaması yakında eklenecektir.</p>
+          </div>
+          <div class="project-placeholder flex flex-col items-center justify-center p-6 h-56 rounded-xl">
+            <h4 class="font-bold text-xl mb-2" data-translate="project_placeholder_title">Proje Başlığı</h4>
+            <p class="text-center" data-translate="project_placeholder_desc">Proje açıklaması yakında eklenecektir.</p>
+          </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-5 gap-8 bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 mb-12">
-          <div class="md:col-span-2 bg-stone-200 rounded-lg animate-pulse min-h-[200px]">
-          </div>
-          <div class="md:col-span-3 flex flex-col justify-center">
-            <h4 class="font-bold text-2xl text-stone-800 mb-3" data-translate="proj1_title"></h4>
-            <p class="text-stone-600 mb-4" data-translate="proj1_desc"></p>
-            <div class="flex flex-wrap gap-2 mb-6">
-            </div>
-            <div class="flex items-center space-x-4">
-              <a href="https://github.com/mfuadyerdelen/proje1" target="_blank" rel="noopener noreferrer"
-                data-translate-aria="github_repo_aria" aria-label="GitHub deposu"
-                class="text-stone-500 hover:accent-color transition-colors"><svg xmlns="http://www.w3.org/2000/svg"
-                  width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
-                  </path>
-                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
-                </svg></a>
-              <a href="#" target="_blank" rel="noopener noreferrer" data-translate-aria="live_demo_aria"
-                aria-label="canlı demo" class="text-stone-500 hover:accent-color transition-colors"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="w-full h-48 bg-stone-200 animate-pulse"></div>
-            <div class="p-6">
-              <h4 class="font-bold text-lg text-stone-800 mb-2" data-translate="proj2_title"></h4>
-              <p class="text-stone-600 mb-4 text-sm" data-translate="proj2_desc"></p>
-              <div class="flex flex-wrap gap-2"></div>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="w-full h-48 bg-stone-200 animate-pulse"></div>
-            <div class="p-6">
-              <h4 class="font-bold text-lg text-stone-800 mb-2" data-translate="proj3_title"></h4>
-              <p class="text-stone-600 mb-4 text-sm" data-translate="proj3_desc"></p>
-              <div class="flex flex-wrap gap-2"></div>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="w-full h-48 bg-stone-200 animate-pulse"></div>
-            <div class="p-6">
-              <h4 class="font-bold text-lg text-stone-800 mb-2" data-translate="proj4_title"></h4>
-              <p class="text-stone-600 mb-4 text-sm" data-translate="proj4_desc"></p>
-              <div class="flex flex-wrap gap-2"></div>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section id="contact" class="text-center">
-        <h3 class="text-2xl md:text-3xl font-bold mb-6 section-title inline-block" data-translate="contact_title">
-          İletişime Geçin</h3>
-        <p class="max-w-xl mx-auto text-stone-600 mb-8" data-translate="contact_p">
+      <section id="contact" class="text-center bg-gray-50 py-20 px-8 rounded-2xl">
+        <h3 class="text-3xl md:text-4xl font-bold mb-4" data-translate="contact_title">
+          İletişime Geçin
+        </h3>
+        <p class="max-w-xl mx-auto text-gray-700 mb-8 text-lg" data-translate="contact_p">
           Bana ulaşmak isterseniz e-posta atabilirsiniz. Sorularınızı veya önerilerinizi duymaktan mutluluk duyarım.
         </p>
-        <a href="mailto:m.fuadyerdelen@gmail.com"
-          class="inline-block px-8 py-3 rounded-lg text-white font-medium accent-bg hover:opacity-90 transition-opacity shadow-lg shadow-cyan-900/20"
-          data-translate="contact_button">
+        <a href="mailto:m.fuadyerdelen@gmail.com" class="btn" data-translate="contact_button">
           Bana Yaz
         </a>
       </section>
     </main>
 
-    <footer class="text-center text-stone-500 mt-24 md:mt-32">
+    <footer class="text-center text-gray-600 mt-24 md:mt-32">
       <p class="text-sm" data-translate="footer_credit"> Finansal Teknolojiler ve Yazılım Geliştirme</p>
-      <p class="text-xs mt-1">&copy; <span id="year"></span> <span data-translate="footer_copyright">Tüm Hakları
-          Saklıdır.</span></p>
+      <p class="text-xs mt-2">&copy; <span id="year"></span> M.Fuad Yerdelen. <span data-translate="footer_copyright">Tüm Hakları Saklıdır.</span></p>
     </footer>
+
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -245,25 +213,15 @@
           nav_projects: "Projects",
           nav_contact: "Contact",
           hero_name: "M.Fuad Yerdelen",
-          hero_title: "Financial Accounting & Software Development",
-          hero_description: "I develop useful applications by combining the fields of finance and software.",
+          hero_title: "Accounting and Software Solutions for SMEs",
+          hero_description: "As an accountant, I understand the financial processes of SMEs. I combine this knowledge with my software skills to develop modern solutions that digitize and optimize these processes.",
           about_title: "About Me",
-          about_p1: "I combine my experience in finance and accounting with my software development skills. My goal is to create digital solutions that simplify financial processes and make them practical for users.",
-          about_p2: "The structured thinking from accounting helps me develop more organized and understandable applications when I code. I am focused on improving myself by continuously learning new technologies.",
+          about_p1: "My background in accounting provides me with a deep understanding of the financial challenges SMEs face. I merge this insight with my software development abilities to create practical digital tools that boost efficiency and simplify workflows.",
+          about_p2: "My goal is to bring together financial expertise and technology to deliver user-friendly and effective applications that support business growth.",
           tech_stack_title: "My Tech Stack:",
           projects_title: "Projects",
-          proj1_title: "",
-          proj1_desc: "",
-          proj1_alt: "",
-          proj2_title: "",
-          proj2_desc: "",
-          proj2_alt: "",
-          proj3_title: "",
-          proj3_desc: "",
-          proj3_alt: "",
-          proj4_title: "",
-          proj4_desc: "",
-          proj4_alt: "",
+          project_placeholder_title: "Project Title",
+          project_placeholder_desc: "Project description will be added soon.",
           contact_title: "Get in Touch",
           contact_p: "If you want to reach me, you can send an e-mail. I would be happy to hear your questions or suggestions.",
           contact_button: "Write to Me",
@@ -272,35 +230,22 @@
           footer_copyright: "All Rights Reserved.",
           github_profile_aria: "GitHub profile",
           linkedin_profile_aria: "LinkedIn profile",
-          twitter_profile_aria: "Twitter profile",
-          github_repo_aria: "GitHub repository",
-          live_demo_aria: "Live demo",
         },
         de: {
-          page_title: "M.Fuad Yerdelen - Persönliches Portfolio",
+          page_title: "M.Fuad Yerdelen - Portfolio",
           nav_about: "Über mich",
           nav_projects: "Projekte",
           nav_contact: "Kontakt",
           hero_name: "M.Fuad Yerdelen",
-          hero_title: "Finanzbuchhaltung & Softwareentwicklung",
-          hero_description: "Ich entwickle nützliche Anwendungen, indem ich die Bereiche Finanzen und Software kombiniere.",
+          hero_title: "Buchhaltung und Softwarelösungen für KMU",
+          hero_description: "Als Buchhalter verstehe ich die Finanzprozesse von KMU. Ich kombiniere dieses Wissen mit meinen Softwarekenntnissen, um moderne Lösungen zu entwickeln, die diese Prozesse digitalisieren und optimieren.",
           about_title: "Über mich",
-          about_p1: "Ich verbinde meine Erfahrung im Finanz- und Rechnungswesen mit meinen Fähigkeiten in der Softwareentwicklung. Mein Ziel ist es, digitale Lösungen zu schaffen, die Finanzprozesse vereinfachen und für Benutzer praktisch machen.",
-          about_p2: "Das strukturierte Denken aus dem Rechnungswesen hilft mir, beim Programmieren besser organisierte und verständlichere Anwendungen zu entwickeln. Ich konzentriere mich darauf, mich durch das kontinuierliche Erlernen neuer Technologien zu verbessern.",
+          about_p1: "Mein Hintergrund in der Buchhaltung ermöglicht mir ein tiefes Verständnis für die finanziellen Herausforderungen, denen KMU gegenüberstehen. Ich verbinde diese Einsicht mit meinen Fähigkeiten in der Softwareentwicklung, um praktische digitale Werkzeuge zu schaffen, die die Effizienz steigern und Arbeitsabläufe vereinfachen.",
+          about_p2: "Mein Ziel ist es, Finanzexpertise und Technologie zusammenzubringen, um benutzerfreundliche und effektive Anwendungen bereitzustellen, die das Unternehmenswachstum unterstützen.",
           tech_stack_title: "Mein Tech-Stack:",
           projects_title: "Projekte",
-          proj1_title: "",
-          proj1_desc: "",
-          proj1_alt: "",
-          proj2_title: "",
-          proj2_desc: "",
-          proj2_alt: "",
-          proj3_title: "",
-          proj3_desc: "",
-          proj3_alt: "",
-          proj4_title: "",
-          proj4_desc: "",
-          proj4_alt: "",
+          project_placeholder_title: "Projekttitel",
+          project_placeholder_desc: "Projektbeschreibung wird in Kürze hinzugefügt.",
           contact_title: "Kontakt aufnehmen",
           contact_p: "Wenn Sie mich erreichen möchten, können Sie eine E-Mail senden. Ich würde mich freuen, Ihre Fragen oder Vorschläge zu hören.",
           contact_button: "Schreiben Sie mir",
@@ -309,35 +254,22 @@
           footer_copyright: "Alle Rechte vorbehalten.",
           github_profile_aria: "GitHub-Profil",
           linkedin_profile_aria: "LinkedIn-Profil",
-          twitter_profile_aria: "Twitter-Profil",
-          github_repo_aria: "GitHub-Repository",
-          live_demo_aria: "Live-Demo",
         },
         tr: {
-          page_title: "m.fuad yerdelen - Portfolyo",
+          page_title: "M.Fuad Yerdelen - Portfolyo",
           nav_about: "Hakkımda",
           nav_projects: "Projeler",
           nav_contact: "İletişim",
           hero_name: "M.Fuad Yerdelen",
-          hero_title: "Finansal Muhasebe ve Yazılım Geliştirme",
-          hero_description: "Finans ve yazılım alanlarını birleştirerek kullanışlı uygulamalar geliştiriyorum.",
+          hero_title: "KOBİ'ler için Muhasebe ve Yazılım Çözümleri",
+          hero_description: "Bir muhasebeci olarak, KOBİ'lerin finansal süreçlerini anlıyor ve bu süreçleri yazılım becerilerimle birleştirerek dijitalleştirmek ve optimize etmek için modern çözümler geliştiriyorum.",
           about_title: "Hakkımda",
-          about_p1: "Finans ve muhasebe alanındaki tecrübemi yazılım geliştirme becerilerimle birleştiriyorum. Amacım, finansal süreçleri basitleştiren ve kullanıcılar için pratik hale getiren dijital çözümler oluşturmaktır.",
-          about_p2: "Muhasebenin getirdiği yapısal düşünme biçimi, kod yazarken daha düzenli ve anlaşılır uygulamalar geliştirmeme yardımcı oluyor. Sürekli yeni teknolojiler öğrenerek kendimi geliştirmeye odaklanıyorum.",
+          about_p1: "Muhasebe geçmişim, KOBİ'lerin karşılaştığı finansal zorlukları derinlemesine anlamamı sağlıyor. Bu anlayışı yazılım geliştirme yeteneğimle birleştirerek, verimliliği artıran ve iş akışlarını basitleştiren pratik dijital araçlar oluşturuyorum.",
+          about_p2: "Amacım, finansal uzmanlık ve teknolojiyi bir araya getirerek, işletmelerin büyümesine destek olan kullanıcı dostu ve etkili uygulamalar sunmaktır.",
           tech_stack_title: "Sık kullandığım teknolojiler:",
           projects_title: "Projeler",
-          proj1_title: "",
-          proj1_desc: "",
-          proj1_alt: "",
-          proj2_title: "",
-          proj2_desc: "",
-          proj2_alt: "",
-          proj3_title: "",
-          proj3_desc: "",
-          proj3_alt: "",
-          proj4_title: "",
-          proj4_desc: "",
-          proj4_alt: "",
+          project_placeholder_title: "Proje Başlığı",
+          project_placeholder_desc: "Proje açıklaması yakında eklenecektir.",
           contact_title: "İletişime Geçin",
           contact_p: "Bana ulaşmak isterseniz e-posta atabilirsiniz. Sorularınızı veya önerilerinizi duymaktan mutluluk duyarım.",
           contact_button: "Bana Yaz",
@@ -346,9 +278,6 @@
           footer_copyright: "Tüm Hakları Saklıdır.",
           github_profile_aria: "GitHub profili",
           linkedin_profile_aria: "LinkedIn profili",
-          twitter_profile_aria: "Twitter profili",
-          github_repo_aria: "GitHub deposu",
-          live_demo_aria: "canlı demo",
         }
       };
 
@@ -370,27 +299,27 @@
 
         document.querySelectorAll('[data-translate]').forEach(el => {
           const key = el.dataset.translate;
-          if (translationSet[key] || translationSet[key] === "") {
+          if (translationSet[key] !== undefined) {
             el.innerHTML = translationSet[key];
           }
         });
 
         document.querySelectorAll('[data-translate-aria]').forEach(el => {
           const key = el.dataset.translateAria;
-          if (translationSet[key] || translationSet[key] === "") {
+          if (translationSet[key] !== undefined) {
             el.setAttribute('aria-label', translationSet[key]);
           }
         });
 
         document.querySelectorAll('[data-translate-alt]').forEach(el => {
           const key = el.dataset.translateAlt;
-          if (translationSet[key] || translationSet[key] === "") {
+          if (translationSet[key] !== undefined) {
             el.setAttribute('alt', translationSet[key]);
           }
         });
 
         if (contactLink && translationSet.contact_mailto_subject) {
-          contactLink.href = `mailto:m.fuadyerdelen@gmail.com.com?subject=${encodeURIComponent(translationSet.contact_mailto_subject)}`;
+          contactLink.href = `mailto:m.fuadyerdelen@gmail.com?subject=${encodeURIComponent(translationSet.contact_mailto_subject)}`;
         }
       };
 
@@ -404,7 +333,7 @@
       document.addEventListener('DOMContentLoaded', () => {
         const savedLang = localStorage.getItem('language');
         const browserLang = navigator.language.split('-')[0];
-        const initialLang = savedLang || (translations[browserLang] ? browserLang : 'tr');
+        const initialLang = savedLang || (translations[browserLang] ? browserLang : 'de');
         setLanguage(initialLang);
       });
     </script>
