@@ -13,81 +13,119 @@
     body {
       font-family: 'Inter', sans-serif;
       background-color: #ffffff;
-      color: #374151; 
+      color: #374151;
     }
-
+    html.dark body {
+      background-color: #18181b;
+      color: #e5e7eb;
+    }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
-      color: #111827; 
-      font-weight: 600;
-    }
-    
-    .lang-btn {
-      transition: color 0.2s ease-in-out;
-    }
-    .lang-btn.active {
       color: #111827;
       font-weight: 600;
     }
-
-    .nav-link {
-        transition: color 0.2s ease-in-out;
+    html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+      color: #f3f4f6;
     }
-    
+    .nav-link {
+      transition: color 0.2s ease-in-out;
+    }
+    .nav-link {
+      color: #6b7280;
+    }
+    .nav-link:hover {
+      color: #111827;
+    }
+    html.dark .nav-link {
+      color: #a1a1aa;
+    }
+    html.dark .nav-link:hover {
+      color: #f3f4f6;
+    }
     .btn {
-      display: inline-block;
       background: #1f2937;
       color: #fff;
-      border-radius: 8px;
-      padding: 0.75rem 2rem;
-      font-weight: 500;
-      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
     }
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    html.dark .btn {
+      background: #27272a;
+      color: #e5e7eb;
     }
-
-    .social-link svg {
-        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-    }
-    .social-link:hover svg {
-        transform: scale(1.1);
-        color: #111827;
-    }
-    
     .project-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb; 
-        border-radius: 12px;
-        overflow: hidden;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
     }
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+    html.dark .project-card {
+      background: #232326;
+      border: 1px solid #27272a;
     }
-    
     .project-placeholder {
-        background-color: #fafafa; 
-        border: 2px dashed #d1d5db; 
-        color: #6b7280; 
-        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+      background-color: #fafafa;
+      border: 2px dashed #d1d5db;
+      color: #6b7280;
     }
-    .project-placeholder:hover {
-        background-color: #f3f4f6; 
-        border-color: #9ca3af; 
+    html.dark .project-placeholder {
+      background-color: #232326;
+      border-color: #52525b;
+      color: #a1a1aa;
     }
-
     .tech-pill {
-        background-color: #f3f4f6; 
-        color: #4b5563; 
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
+      background-color: #f3f4f6;
+      color: #4b5563;
+    }
+    html.dark .tech-pill {
+      background-color: #27272a;
+      color: #e5e7eb;
+    }
+    .social-link svg {
+      color: #6b7280;
+    }
+    html.dark .social-link svg {
+      color: #a1a1aa;
+    }
+    .bg-gray-50 {
+      background-color: #f9fafb;
+    }
+    html.dark .bg-gray-50 {
+      background-color: #232326;
+    }
+    .text-gray-700 {
+      color: #374151;
+    }
+    html.dark .text-gray-700 {
+      color: #e5e7eb;
+    }
+    .text-gray-600 {
+      color: #4b5563;
+    }
+    html.dark .text-gray-600 {
+      color: #d1d5db;
+    }
+    .text-gray-800 {
+      color: #1f2937;
+    }
+    html.dark .text-gray-800 {
+      color: #f3f4f6;
+    }
+    .text-gray-500 {
+      color: #6b7280;
+    }
+    html.dark .text-gray-500 {
+      color: #a1a1aa;
+    }
+    .border-gray-100 {
+      border-color: #f3f4f6;
+    }
+    html.dark .border-gray-100 {
+      border-color: #27272a;
+    }
+    .border-gray-200 {
+      border-color: #e5e7eb;
+    }
+    html.dark .border-gray-200 {
+      border-color: #52525b;
+    }
+    .border-gray-700 {
+      border-color: #52525b;
     }
   </style>
 </head>
@@ -107,17 +145,19 @@
                 <button data-lang="en" class="lang-btn font-medium text-sm text-gray-500 hover:text-gray-900 focus:outline-none">EN</button>
                 <button data-lang="de" class="lang-btn font-medium text-sm text-gray-500 hover:text-gray-900 focus:outline-none">DE</button>
             </div>
+            <button id="dark-toggle" class="ml-4 px-3 py-1 rounded text-gray-500 border border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-300 dark:border-gray-700 transition">
+              🌙
+            </button>
         </div>
     </header>
 
     <main>
       <section id="home" class="text-center mb-32 md:mb-40">
         <h1 class="text-4xl md:text-6xl font-bold mb-4" data-translate="hero_name">M.Fuad Yerdelen</h1>
-        <h2 class="text-xl md:text-2xl text-gray-600 mb-8" data-translate="hero_title">KOBİ'ler için Muhasebe ve Yazılım Çözümleri</h2>
+        <h2 class="text-xl md:text-2xl text-gray-600 mb-8" data-translate="hero_title">Muhasebe ve Yazılım Geliştirme</h2>
         <p class="max-w-2xl mx-auto mb-10 text-lg text-gray-700 leading-relaxed" data-translate="hero_description">
-          Bir muhasebeci olarak, KOBİ'lerin finansal süreçlerini anlıyor ve bu süreçleri yazılım becerilerimle birleştirerek dijitalleştirmek ve optimize etmek için modern çözümler geliştiriyorum.
+          Muhasebeci olarak iş süreçlerini ve finansal yönetimi biliyor, farklı yazılım teknolojilerinde kendimi geliştiriyorum.
         </p>
-       
         <div class="flex justify-center items-center space-x-6">
           <a href="https://github.com/fuadyerdelen" target="_blank" rel="noopener noreferrer"
             data-translate-aria="github_profile_aria" aria-label="GitHub profili"
@@ -146,8 +186,12 @@
       <section id="about" class="mb-32 md:mb-40">
         <h3 class="text-3xl md:text-4xl font-bold mb-8" data-translate="about_title">Hakkımda</h3>
         <div class="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl">
-          <p data-translate="about_p1">Muhasebe geçmişim, KOBİ'lerin karşılaştığı finansal zorlukları derinlemesine anlamamı sağlıyor. Bu anlayışı yazılım geliştirme yeteneğimle birleştirerek, verimliliği artıran ve iş akışlarını basitleştiren pratik dijital araçlar oluşturuyorum.</p>
-          <p data-translate="about_p2">Amacım, finansal uzmanlık ve teknolojiyi bir araya getirerek, işletmelerin büyümesine destek olan kullanıcı dostu ve etkili uygulamalar sunmaktır.</p>
+          <p data-translate="about_p1">
+            Küçük ve orta ölçekli firmaların iş süreçlerini ve muhasebeleştirilmesini yürütüyorum. Muhasebe alanındaki tecrübemle, bu süreçlerin dijitalleşmesi ve verimli hale gelmesi için çalışıyorum.
+          </p>
+          <p data-translate="about_p2">
+            Yazılım geliştirme konusunda farklı teknolojilerde kendimi sürekli geliştiriyor, iş dünyasının ihtiyaçlarına uygun pratik ve kullanıcı dostu çözümler üretiyorum.
+          </p>
         </div>
         <h4 class="font-medium text-gray-800 mt-12 mb-5" data-translate="tech_stack_title">Sık kullandığım teknolojiler:</h4>
         <div class="flex flex-wrap gap-3">
@@ -213,11 +257,11 @@
           nav_projects: "Projects",
           nav_contact: "Contact",
           hero_name: "M.Fuad Yerdelen",
-          hero_title: "Accounting and Software Solutions for SMEs",
-          hero_description: "As an accountant, I understand the financial processes of SMEs. I combine this knowledge with my software skills to develop modern solutions that digitize and optimize these processes.",
+          hero_title: "Accounting and Software Development",
+          hero_description: "I am an accountant with experience in business processes and financial management, and I am constantly improving myself in different software technologies.",
           about_title: "About Me",
-          about_p1: "My background in accounting provides me with a deep understanding of the financial challenges SMEs face. I merge this insight with my software development abilities to create practical digital tools that boost efficiency and simplify workflows.",
-          about_p2: "My goal is to bring together financial expertise and technology to deliver user-friendly and effective applications that support business growth.",
+          about_p1: "I manage the business processes and accounting of small and medium-sized companies. With my experience in accounting, I work to digitize and optimize these processes.",
+          about_p2: "I continuously improve myself in various software technologies and develop practical, user-friendly solutions tailored to the needs of the business world.",
           tech_stack_title: "My Tech Stack:",
           projects_title: "Projects",
           project_placeholder_title: "Project Title",
@@ -226,7 +270,7 @@
           contact_p: "If you want to reach me, you can send an e-mail. I would be happy to hear your questions or suggestions.",
           contact_button: "Write to Me",
           contact_mailto_subject: "Hello from your portfolio",
-          footer_credit: "Financial Technologies and Software Development",
+          footer_credit: "Accounting and Software Development",
           footer_copyright: "All Rights Reserved.",
           github_profile_aria: "GitHub profile",
           linkedin_profile_aria: "LinkedIn profile",
@@ -237,11 +281,11 @@
           nav_projects: "Projekte",
           nav_contact: "Kontakt",
           hero_name: "M.Fuad Yerdelen",
-          hero_title: "Buchhaltung und Softwarelösungen für KMU",
-          hero_description: "Als Buchhalter verstehe ich die Finanzprozesse von KMU. Ich kombiniere dieses Wissen mit meinen Softwarekenntnissen, um moderne Lösungen zu entwickeln, die diese Prozesse digitalisieren und optimieren.",
+          hero_title: "Buchhaltung und Softwareentwicklung",
+          hero_description: "Ich bin Buchhalter mit Erfahrung in Geschäftsprozessen und Finanzmanagement und bilde mich ständig in verschiedenen Softwaretechnologien weiter.",
           about_title: "Über mich",
-          about_p1: "Mein Hintergrund in der Buchhaltung ermöglicht mir ein tiefes Verständnis für die finanziellen Herausforderungen, denen KMU gegenüberstehen. Ich verbinde diese Einsicht mit meinen Fähigkeiten in der Softwareentwicklung, um praktische digitale Werkzeuge zu schaffen, die die Effizienz steigern und Arbeitsabläufe vereinfachen.",
-          about_p2: "Mein Ziel ist es, Finanzexpertise und Technologie zusammenzubringen, um benutzerfreundliche und effektive Anwendungen bereitzustellen, die das Unternehmenswachstum unterstützen.",
+          about_p1: "Ich betreue die Geschäftsprozesse und Buchhaltung von kleinen und mittelständischen Unternehmen. Mit meiner Erfahrung in der Buchhaltung arbeite ich daran, diese Prozesse zu digitalisieren und effizienter zu gestalten.",
+          about_p2: "Ich bilde mich ständig in verschiedenen Softwaretechnologien weiter und entwickle praktische, benutzerfreundliche Lösungen für die Anforderungen der Geschäftswelt.",
           tech_stack_title: "Mein Tech-Stack:",
           projects_title: "Projekte",
           project_placeholder_title: "Projekttitel",
@@ -250,7 +294,7 @@
           contact_p: "Wenn Sie mich erreichen möchten, können Sie eine E-Mail senden. Ich würde mich freuen, Ihre Fragen oder Vorschläge zu hören.",
           contact_button: "Schreiben Sie mir",
           contact_mailto_subject: "Hallo aus Ihrem Portfolio",
-          footer_credit: "Finanztechnologien und Softwareentwicklung",
+          footer_credit: "Buchhaltung und Softwareentwicklung",
           footer_copyright: "Alle Rechte vorbehalten.",
           github_profile_aria: "GitHub-Profil",
           linkedin_profile_aria: "LinkedIn-Profil",
@@ -261,11 +305,11 @@
           nav_projects: "Projeler",
           nav_contact: "İletişim",
           hero_name: "M.Fuad Yerdelen",
-          hero_title: "KOBİ'ler için Muhasebe ve Yazılım Çözümleri",
-          hero_description: "Bir muhasebeci olarak, KOBİ'lerin finansal süreçlerini anlıyor ve bu süreçleri yazılım becerilerimle birleştirerek dijitalleştirmek ve optimize etmek için modern çözümler geliştiriyorum.",
+          hero_title: "Muhasebe ve Yazılım Geliştirme",
+          hero_description: "Muhasebeci olarak iş süreçlerini ve finansal yönetimi biliyor, farklı yazılım teknolojilerinde kendimi geliştiriyorum.",
           about_title: "Hakkımda",
-          about_p1: "Muhasebe geçmişim, KOBİ'lerin karşılaştığı finansal zorlukları derinlemesine anlamamı sağlıyor. Bu anlayışı yazılım geliştirme yeteneğimle birleştirerek, verimliliği artıran ve iş akışlarını basitleştiren pratik dijital araçlar oluşturuyorum.",
-          about_p2: "Amacım, finansal uzmanlık ve teknolojiyi bir araya getirerek, işletmelerin büyümesine destek olan kullanıcı dostu ve etkili uygulamalar sunmaktır.",
+          about_p1: "Küçük ve orta ölçekli firmaların iş süreçlerini ve muhasebeleştirilmesini yürütüyorum. Muhasebe alanındaki tecrübemle, bu süreçlerin dijitalleşmesi ve verimli hale gelmesi için çalışıyorum.",
+          about_p2: "Yazılım geliştirme konusunda farklı teknolojilerde kendimi sürekli geliştiriyor, iş dünyasının ihtiyaçlarına uygun pratik ve kullanıcı dostu çözümler üretiyorum.",
           tech_stack_title: "Sık kullandığım teknolojiler:",
           projects_title: "Projeler",
           project_placeholder_title: "Proje Başlığı",
@@ -274,7 +318,7 @@
           contact_p: "Bana ulaşmak isterseniz e-posta atabilirsiniz. Sorularınızı veya önerilerinizi duymaktan mutluluk duyarım.",
           contact_button: "Bana Yaz",
           contact_mailto_subject: "Portfolyonuzdan merhaba",
-          footer_credit: "Finansal Teknolojiler ve Yazılım Geliştirme",
+          footer_credit: "Muhasebe ve Yazılım Geliştirme",
           footer_copyright: "Tüm Hakları Saklıdır.",
           github_profile_aria: "GitHub profili",
           linkedin_profile_aria: "LinkedIn profili",
@@ -330,7 +374,18 @@
         }
       });
 
+      document.getElementById('dark-toggle').onclick = function () {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      };
       document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
         const savedLang = localStorage.getItem('language');
         const browserLang = navigator.language.split('-')[0];
         const initialLang = savedLang || (translations[browserLang] ? browserLang : 'de');
