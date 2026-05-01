@@ -127,6 +127,78 @@
     .border-gray-700 {
       border-color: #52525b;
     }
+    .project-card-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem 0.75rem 0 0;
+      height: 200px;
+      background-color: #f3f4f6;
+    }
+    html.dark .project-card-image {
+      background-color: #1f2937;
+    }
+    .project-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .project-card-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .project-card-hover:hover .project-card-overlay {
+      opacity: 1;
+    }
+    .project-card-overlay-text {
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+    .project-card-content {
+      padding: 1.5rem;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-top: none;
+      border-radius: 0 0 0.75rem 0.75rem;
+    }
+    html.dark .project-card-content {
+      background: #232326;
+      border-color: #27272a;
+    }
+    .project-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+    html.dark .project-card-title {
+      color: #f3f4f6;
+    }
+    .project-card-frameworks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .framework-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      background-color: #f3f4f6;
+      color: #4b5563;
+      border-radius: 9999px;
+      font-weight: 500;
+    }
+    html.dark .framework-tag {
+      background-color: #27272a;
+      color: #e5e7eb;
+    }
   </style>
 </head>
 
@@ -209,10 +281,26 @@
         <h3 class="text-3xl md:text-4xl font-bold mb-12" data-translate="projects_title">Projeler</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <div class="project-placeholder flex flex-col items-center justify-center p-6 h-56 rounded-xl">
-            <h4 class="font-bold text-xl mb-2" data-translate="project_placeholder_title">Proje Başlığı</h4>
-            <p class="text-center" data-translate="project_placeholder_desc">Proje açıklaması yakında eklenecektir.</p>
-          </div>
+          <a href="https://easybuchhaltung.web.app/" target="_blank" rel="noopener noreferrer" class="project-card-hover transition-shadow hover:shadow-lg rounded-xl overflow-hidden">
+            <div class="project-card-image">
+              <img src="assets/easybuchhaltung-preview.png" alt="Easy Buchhaltung" data-translate-alt="easybuchhaltung_alt" loading="lazy">
+              <div class="project-card-overlay">
+                <div class="project-card-overlay-text" data-translate="easybuchhaltung_description">
+                  Eine Suite von Tools zur Vereinfachung von Buchhaltungsprozessen. Excel- und CSV-Dateien direkt im Browser verarbeiten.
+                </div>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <h4 class="project-card-title" data-translate="easybuchhaltung_title">Easy Buchhaltung</h4>
+              <div class="project-card-frameworks">
+                <span class="framework-tag">Angular</span>
+                <span class="framework-tag">TypeScript</span>
+                <span class="framework-tag">Tailwind CSS</span>
+                <span class="framework-tag">Firebase</span>
+              </div>
+            </div>
+          </a>
+
           <div class="project-placeholder flex flex-col items-center justify-center p-6 h-56 rounded-xl">
             <h4 class="font-bold text-xl mb-2" data-translate="project_placeholder_title">Proje Başlığı</h4>
             <p class="text-center" data-translate="project_placeholder_desc">Proje açıklaması yakında eklenecektir.</p>
@@ -266,6 +354,9 @@
           projects_title: "Projects",
           project_placeholder_title: "Project Title",
           project_placeholder_desc: "Project description will be added soon.",
+          easybuchhaltung_title: "Easy Buchhaltung",
+          easybuchhaltung_description: "A suite of tools to simplify accounting processes. Process Excel and CSV files directly in the browser without a server or cloud.",
+          easybuchhaltung_alt: "Easy Buchhaltung - Accounting Suite",
           contact_title: "Get in Touch",
           contact_p: "If you want to reach me, you can send an e-mail. I would be happy to hear your questions or suggestions.",
           contact_button: "Write to Me",
@@ -290,6 +381,9 @@
           projects_title: "Projekte",
           project_placeholder_title: "Projekttitel",
           project_placeholder_desc: "Projektbeschreibung wird in Kürze hinzugefügt.",
+          easybuchhaltung_title: "Easy Buchhaltung",
+          easybuchhaltung_description: "Eine Suite von Tools zur Vereinfachung von Buchhaltungsprozessen. Verarbeiten Sie Excel- und CSV-Dateien direkt im Browser ohne Server oder Cloud.",
+          easybuchhaltung_alt: "Easy Buchhaltung - Buchhaltungs-Suite",
           contact_title: "Kontakt aufnehmen",
           contact_p: "Wenn Sie mich erreichen möchten, können Sie eine E-Mail senden. Ich würde mich freuen, Ihre Fragen oder Vorschläge zu hören.",
           contact_button: "Schreiben Sie mir",
@@ -314,6 +408,9 @@
           projects_title: "Projeler",
           project_placeholder_title: "Proje Başlığı",
           project_placeholder_desc: "Proje açıklaması yakında eklenecektir.",
+          easybuchhaltung_title: "Easy Buchhaltung",
+          easybuchhaltung_description: "Muhasebe süreçlerini basitleştirmek için tasarlanmış araçlardan oluşan bir koleksiyon. Excel ve CSV dosyalarını doğrudan tarayıcıda, sunucu veya bulut olmadan işleyin.",
+          easybuchhaltung_alt: "Easy Buchhaltung - Muhasebe Uygulaması",
           contact_title: "İletişime Geçin",
           contact_p: "Bana ulaşmak isterseniz e-posta atabilirsiniz. Sorularınızı veya önerilerinizi duymaktan mutluluk duyarım.",
           contact_button: "Bana Yaz",
